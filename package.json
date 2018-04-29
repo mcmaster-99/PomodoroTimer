@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/mcmaster-99/Local-Weather/issues"
   },
-  "homepage": "https://github.com/mcmaster-99/Local-Weather#readme"
+  "homepage": "https://github.com/mcmaster-99/Local-Weather#readme",
+  "dependencies": {
+    "npm": "^6.0.0"
+  }
 }
