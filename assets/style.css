@@ -34,7 +34,8 @@ h1 {
 
 #circle {
   display: grid;
-  grid-template-rows: 10px 10px 10px;
+  grid-template-rows: 100px 100px 100px 100px;
+  grid-template-columns: 133px 133px 133px;
   height: 400px;
   width: 400px;
   background-color: #000055;
@@ -42,8 +43,10 @@ h1 {
   box-shadow: 0px 0px 20px 2px black; }
 
 #sessionDiv {
-  margin: 50px auto;
-  color: white; }
+  color: white;
+  border: 1px solid white;
+  grid-row: 3/4;
+  grid-column: 2; }
 
 #sessionText {
   font-family: textFont;
@@ -53,7 +56,10 @@ h1 {
   text-align: center; }
 
 #breakDiv {
-  color: white; }
+  color: white;
+  border: 1px solid white;
+  grid-row: 3/4;
+  grid-column: 1; }
 
 #breakText {
   margin-left: 10px;
@@ -61,4 +67,18 @@ h1 {
   font-size: 15px; }
 
 #breakNumber {
+  margin-left: 50px; }
+
+#intervalDiv {
+  color: white;
+  border: 1px solid white;
+  grid-row: 3/4;
+  grid-column: 3; }
+
+#intervalText {
+  margin-left: 10px;
+  font-family: textFont;
+  font-size: 15px; }
+
+#intervalNumber {
   margin-left: 50px; }
