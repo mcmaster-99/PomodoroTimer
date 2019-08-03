@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"border",
+				"border-bottom-right-radius"
+			],
+			[
+				"ani",
+				"animation-duration\tproperty"
+			],
+			[
 				"spee",
 				"SpeechRecognition"
 			]
@@ -11,6 +19,24 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/WatchBand/WatchBand.css",
+			"settings":
+			{
+				"buffer_size": 726,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/WatchBand/WatchBand.js",
+			"settings":
+			{
+				"buffer_size": 306,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -42,6 +68,12 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/home/bilal/Documents/Web Dev/PomodoroTimer",
+		"/home/bilal/Documents/Web Dev/PomodoroTimer/src",
+		"/home/bilal/Documents/Web Dev/PomodoroTimer/src/WatchBand"
+	],
 	"file_history":
 	[
 		"/home/bilal/Documents/Web Dev/nodejs practice/node_connection.js",
@@ -83,8 +115,65 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/WatchBand/WatchBand.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 726,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								435,
+								435
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/WatchBand/WatchBand.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 306,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								242,
+								242
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -124,7 +213,7 @@
 		"height": 0.0
 	},
 	"pinned_build_system": "",
-	"project": "pomodoro.sublime-project",
+	"project": "PomodoroTimer.sublime-project",
 	"replace":
 	{
 		"height": 0.0
@@ -165,7 +254,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 248.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
