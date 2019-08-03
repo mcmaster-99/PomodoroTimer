@@ -1,0 +1,14 @@
+.SessionContainer {
+	text-align: center;
+	width: 7rem;
+	height: 4rem;
+	margin-top: 0px;
+}
+
+.increment, .decrement {
+	display: inline-block;
+	margin-top: 0px;
+}
+.increment {
+	margin-left: 2rem;
+}
