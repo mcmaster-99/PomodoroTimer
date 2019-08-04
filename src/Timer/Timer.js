@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
+import SessionTime from '../SessionTime/SessionTime';
 import './Timer.css';
 
 class Timer extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			timeLeft: 5,
+			timeLeft: 1500,
 			isOn: false
 		}
 	}
 	componentDidMount = () => {
-		console.log(this)
+		console.log("Timer Component mounted")
 	}
 
 	startTimer = () => {
@@ -40,6 +41,22 @@ class Timer extends Component {
 		})
 	}
 
+	increment = (prevState, props) => {
+		// calculate incremented value
+		let decNum = this.state.timeLeft += 300
+		this.setState({
+			time: decNum
+		})
+	}
+
+	decrement = (prevState) => {
+		// calculate decremented value
+		let incNum = this.state.timeLeft -= 300
+		this.setState({
+			time: incNum
+		})
+	}
+
 
 	render() {
 
@@ -47,10 +64,13 @@ class Timer extends Component {
 		
 		return (
 			<div className="TimerContainer">
+
+				<SessionTime increment={this.increment} decrement={this.decrement}/>
+
 				<p className="TimerText">{this.state.timeLeft}</p>
 				<div className="ButtonContainer">
 
-					<button onClick={this.startTimer}>
+					<button className="PlayButton" onClick={this.startTimer}>
 						<div className="PlayIcon"></div>
 					</button>
 
@@ -58,10 +78,10 @@ class Timer extends Component {
 						<div className="PauseIcon"></div>
 					</button>
 
-					<button onClick={this.resetTimer}>
+					<button className="StopButton" onClick={this.resetTimer}>
 						<div className="StopIcon"></div>
 					</button>
-					
+
 				</div>
 			</div>
 		);

@@ -14,7 +14,7 @@ class WatchBand extends Component {
 				<div className="WatchBandRightHalf">
 				</div>
 				<div className="WatchCase">
-					<SessionTime/>
+					<div className="WatchCaseBoxShadow"></div>
 					<Timer/>
 				</div>
 			</div>

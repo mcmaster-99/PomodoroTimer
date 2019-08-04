@@ -5,7 +5,7 @@ class SessionTime extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			name: "Session Time",
+			name: "Session Time"
 		}
 	}
 
@@ -13,16 +13,12 @@ class SessionTime extends Component {
 		console.log("session time component mounted")
 	}
 
-	/*increment = () => {
-		this.state.
-	}*/
-
 	render() {
 		return (
 			<div className="SessionContainer">
-				<p>Session Time</p>
-				<p className="decrement">-</p>
-				<p className="increment">+</p>
+				<p className="SessionText">{this.state.name}</p>
+				<button className="decrement" onClick={this.props.decrement}>-</button>
+				<button className="increment" onClick={this.props.increment}>+</button>
 			</div>
 		);
 	}

@@ -13,7 +13,7 @@
 	margin: 0;
 }
 
-button {
+.PlayButton, .PauseButton, .StopButton {
 	padding: 0.5rem;
 	background: none;
 	border: 2px solid white;
