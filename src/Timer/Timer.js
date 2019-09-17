@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import SessionTime from '../SessionTime/SessionTime';
+import BreakTime from '../BreakTime/BreakTime';
 import './Timer.css';
 
 class Timer extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			timeLeft: 1500,
+			minutes: 25,
+			seconds: '00',
 			isOn: false
 		}
 	}
@@ -15,45 +17,54 @@ class Timer extends Component {
 	}
 
 	startTimer = () => {
-		console.log(this)
-		this.timer = setInterval(() => {
-			this.setState({
-				isOn: true,
-				timeLeft: this.state.timeLeft - 1
-			})
-			if (this.state.timeLeft <= 0) {
-				clearInterval(this.timer);
+
+		this.seconds = setInterval(() => {
+			if (this.state.seconds === 0 && this.state.minutes === 0) {
+				clearInterval(this.seconds);	
 				alert("timer ended")
+			}
+			// if seconds is 0, reset it to 60 and decrement minutes
+			else if (this.state.seconds === '00'){
+				this.setState({minutes: this.state.minutes-1, seconds: 59})
+
+			// add 0 in front of single digit seconds
+			} else if (this.state.seconds <= 10) {
+					this.setState({seconds: '0'+(this.state.seconds - 1)})
+
+			// add 0 in front of single digit minutes
+			} else if (this.state.minutes <= 10) {
+					this.setState({minutes: '0'+(this.state.minutes - 1)})
+
+			// decrement seconds if none of the conditions above exist
+			} else {
+				this.setState({seconds: this.state.seconds - 1})
 			}
 		}, 1000);
 		
 	}
 
 	pauseTimer = () => {
-		clearInterval(this.timer)
+		clearInterval(this.seconds)
 	}
 
 	resetTimer = () => {
-		clearInterval(this.timer)
+		clearInterval(this.seconds)
 		this.setState({
 			isOn: false,
-			timeLeft: 1500
+			minutes: 25,
+			seconds: '00'
 		})
 	}
 
 	increment = (prevState, props) => {
-		// calculate incremented value
-		let decNum = this.state.timeLeft += 300
 		this.setState({
-			time: decNum
+			minutes: this.state.minutes + 5
 		})
 	}
 
 	decrement = (prevState) => {
-		// calculate decremented value
-		let incNum = this.state.timeLeft -= 300
 		this.setState({
-			time: incNum
+			minutes: this.state.minutes - 5
 		})
 	}
 
@@ -67,7 +78,7 @@ class Timer extends Component {
 
 				<SessionTime increment={this.increment} decrement={this.decrement}/>
 
-				<p className="TimerText">{this.state.timeLeft}</p>
+				<p className="TimerText">{this.state.minutes}:{this.state.seconds}</p>
 				<div className="ButtonContainer">
 
 					<button className="PlayButton" onClick={this.startTimer}>
@@ -81,6 +92,8 @@ class Timer extends Component {
 					<button className="StopButton" onClick={this.resetTimer}>
 						<div className="StopIcon"></div>
 					</button>
+
+					<BreakTime />
 
 				</div>
 			</div>

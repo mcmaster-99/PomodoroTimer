@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './WatchBand.css';
 import Timer from '../Timer/Timer';
-import SessionTime from '../SessionTime/SessionTime';
 
 class WatchBand extends Component {
 	render() {

@@ -17,8 +17,8 @@ class SessionTime extends Component {
 		return (
 			<div className="SessionContainer">
 				<p className="SessionText">{this.state.name}</p>
-				<button className="decrement" onClick={this.props.decrement}>-</button>
-				<button className="increment" onClick={this.props.increment}>+</button>
+				<button className="decrement" onClick={this.props.decrement}>-5</button>
+				<button className="increment" onClick={this.props.increment}>+5</button>
 			</div>
 		);
 	}
