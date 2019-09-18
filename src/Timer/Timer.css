@@ -7,9 +7,16 @@
 }
 .TimerText {
 	justify-content: space-between;
-	color: white;
 	font-weight: bold;
 	font-size: 3rem;
+	margin: 0;
+}
+
+#StatusText {
+	justify-content: space-between;
+	font-weight: bold;
+	color: #EDD8FF;
+	font-size: 1.1rem;
 	margin: 0;
 }
 
